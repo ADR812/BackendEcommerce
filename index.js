@@ -22,13 +22,13 @@ mongoose.connect(
 );
 
 
-App.use(cors({
-  credentials: true,
-  preflightContinue: true,
-  methods: ['GET', 'POST', 'PUT', 'PATCH' , 'DELETE', 'OPTIONS'],
-  origin: true
-}));
-
+App.use(cors());
+// cors({
+//   credentials: true,
+//   preflightContinue: true,
+//   methods: ['GET', 'POST', 'PUT', 'PATCH' , 'DELETE', 'OPTIONS'],
+//   origin: true
+// })
 App.use(express.json());
 
 App.use("/api/user", userRoute);

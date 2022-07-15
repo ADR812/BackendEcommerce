@@ -28,7 +28,7 @@ const verifyTokenAuth = (req,res,next)=>{
 
 const verifyTokenAdmin = (req,res,next)=>{
   VerifyJWT(req,res,()=>{
-    if(req.user.isAdmin){
+    if(req?.user?.isAdmin){
       next();
     }
     else{
